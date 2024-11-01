@@ -1,0 +1,67 @@
+/*Variables*/
+:root {
+    /*====| Color Palletes |====*/
+    /*____Pallete 1____*/
+    --P1_LightShade: #f9f9f7;
+    --P1_LightAccent: #8a8679;
+    --P1_MainShade: #7d8c9a;
+    --P1_DarkShade: #887878;
+    --P1_DarkAccent: #333940;
+    /*____Pallete 2____*/
+    --P2_LightShade: #f9f9f7;
+    --P2_LightAccent: #8a8679;
+    --P2_MainShade: #7d8c9a;
+    --P2_DarkShade: #887878;
+    --P2_DarkAccent: #333940;
+    
+    /*====| Ect. |====*/
+}
+
+/*====| Base Styles |====*/
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body{ 
+    background-color: var(--P1_LightShade);
+}
+
+footer{
+    background-color: var(--P1_DarkShade);
+}
+
+
+/*___Nav Bar___*/
+nav ul{
+    background-color: var(--P1_DarkAccent);
+    list-style: none;
+    display: flex;
+}
+.Nav-Item {
+    margin: 0 15px;
+}
+.Nav-Item a {
+    text-decoration: none;
+    padding: 10px;
+}
+.Nav-Item a:hover {
+    background-color: var(--P1_DarkAccent);
+    border-radius: 5px;
+}
+.Nav-Item a{
+    color: var(--P1_LightShade); 
+    text-decoration: none;
+    font-size: 18px;
+}
+/*___Hero Section___*/
+#HeroSect{
+    background-color: var(--P1_DarkAccent);
+    color: var(--P1_LightShade);
+    text-align: center;
+}
+/*___Content Section___*/
+#ContentSect{
+    background-color: var(--P1_LightShade);
+}

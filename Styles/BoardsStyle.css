@@ -1,0 +1,36 @@
+:root {
+    /*====| Color Palletes |====*/
+    /*____Pallete 1____*/
+    --P1_LightShade: #f9f9f7;
+    --P1_LightAccent: #8a8679;
+    --P1_MainShade: #7d8c9a;
+    --P1_DarkShade: #887878;
+    --P1_DarkAccent: #333940;
+    /*____Pallete 2____*/
+    --P2_LightShade: #f9f9f7;
+    --P2_LightAccent: #8a8679;
+    --P2_MainShade: #7d8c9a;
+    --P2_DarkShade: #887878;
+    --P2_DarkAccent: #333940;
+    
+    /*====| Ect. |====*/
+}
+
+.ObjectivesBox{
+    background-color: var(--P1_LightShade);
+    height: fit-content;
+}
+.ObjectivesBox h1{
+    font-weight: bolder;
+}
+
+.Obj_Item{
+    text-align: center;
+    padding: 20px;
+}
+.prim_Obj_Item{
+    background-color: var(--P1_DarkAccent);
+}
+.alt_Obj_Item{
+    background-color: var(--P1_MainShade);
+}
