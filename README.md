@@ -1,11 +1,5 @@
 # Portfolio
-This will be a portfolio website that I will be building to show off what I have created and to show off my passions and ambitions
+Howdy! I'm Lucas Foxworthy. I mainly program for games but also focus on implementing and designing UI for games. 
+I am a Computer Science and Game Programming Major from University of Advancing Technologies.
 
-
-I am Lucas Foxworthy and I am currently a first-year student at University of Advancing Technology. 
-My current major is computer science, however I also share passion in game development and VR
-
-After a class were I made my final a website for my the start of my online portfolio, 
-and now I continue to update it when another assignment calls for it or when I want to put on 
-something I am proud to show off or want to consider adjusting some design stuff.
-
+This is currently a work in progress as I need to work on tranferring my old portfolio design I did online over to HTML/CSS/JS files
