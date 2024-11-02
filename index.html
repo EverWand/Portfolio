@@ -39,29 +39,33 @@
         </ul> 
     </nav>
     <!--Hero Section-->
-    <section id="HeroSect" style="display: flex;">
-        <div id="Hero_L">
+    <section id="HeroSect" class="PrimaryHero" style="display: flex;">
+        <!--Cantainer with the information of me-->
+        <div id= "SelfInfo" style="flex: 1;">
             <h1>Howdy,</h1>
-            <h1>I Work With...</h1>
-            <ol>
-                <li>Game Development</li>
-                <li>Computer Science</li>
-                <li>UI/UX</li>
-            </ol>
+            <h1>I work with...</h1>  
+            <ul id = "DisciplineList">
+                <li class="Discipline">
+                    <a><h2>Game Development</h2></a>
+                </li>
+                <li class="Discipline">
+                   <a><h2>Computer Science</h2></a>
+                </li>
+                <li class="Discipline">
+                   <a><h2>UI/UX</h2></a>
+                </li>
+            </ul>
+            <a class="CalltoAction" href="./Pages/portfolio.html"> Check Out My Work!</a>
         </div>
-        <div class = "V_Line"></div>
-        <div id="Hero_R">
-            <img alt="Portrait Photo">
-            <h1>Lucas Foxworthy</h1>
-            <h1>@EverWand</h1>
+        <div class="V_Line"></div>
+        <!--Image of me-->
+        <div id="SelfImg" style="flex: 1;">
+                <!--text to display my name-->
+                <h1>Lucas Foxworthy</h1>
         </div>
     </section>
     <!--Content-->
     <section id="ContentSect">
-        <h1>Top Works</h1>
-        <div id="Top Works">
-            <div></div>
-        </div>
     </section>
     <!--Footer-->
     <footer>

@@ -1,0 +1,113 @@
+/*styles for the whole portfolio section*/
+#Portfolio{
+    /*Changes the color of the text in this section*/
+    color:ghostwhite;
+    /*Changes the color of the section's background*/
+    background-color: black;
+    /*creates a border for this section*/
+    border: 10px maroon inset;
+    /*gives the section a margin*/
+    margin:2%;
+    /*gives the section padding*/
+    padding: 2%;
+}
+
+/*For the rows holding the web displays*/
+#CR{
+    /*changes the diplay type to flex*/
+    display: flex;
+    /*gives the section a margin*/
+    margin: left 5% right 5%;
+
+}
+/*Styles for the website displays inside the portfolio*/
+.WebDisplay{
+    /*Changes the color of the text in this section*/
+    color:ghostwhite;
+    /*changes the font size in this section*/
+    font-size: 200%;
+    /*Adjusts the height of the section*/
+    height: 400px; 
+    /*gives the section a margin*/
+    margin: 2px;
+    /*changes the size of the background to cover the section*/
+    background-size: cover;
+    /*centers the background image*/
+    background-position: center;
+    /*saturates the background image*/
+    flex:1;
+    /*Adds a filter on the section*/
+    filter: saturate(35%);
+    /*Adds transition to any changes made to the style of this section*/
+    transition: .5s;
+}
+
+/*styles for the header 2 tags inside this the website display container*/
+.WebDisplay h2{
+    /*Changes the color of the section's background*/
+    background-color: rgba(0, 0, 0, 0.473);
+    /*gives the section bottom padding*/
+    padding-bottom: 10px;
+    /*changes the how the section is positioned*/
+    position:relative;
+    /*adjusts the top position of this section*/
+    top: 80%;
+    /*Adds transition to any changes made to the style of this section*/
+    transition: .5s;
+
+}
+
+/*styles for when a website display is hovered over*/
+.WebDisplay:hover {
+    /*edits the filter on the section*/
+    filter: saturate(100%);
+    /*gives the section bottom padding*/
+    padding-bottom: 20px;
+    /*createsa border for this section*/
+    border: 5px maroon outset;
+}
+
+/*styles for the header 2 tags found inside the Web dislay container when the mouse hoveres over a web display*/
+.WebDisplay:hover > h2{
+    /*adjusts the top position of this section*/
+    top: 70%;
+    /*gives the section bottom padding*/
+    padding-bottom: 50px;
+}
+
+/*ID for the Countdown web display*/
+#CountDown{
+    /*makes the section's background an image*/
+    background-image: url("https://raw.githubusercontent.com/EverWand/Blast-Off-Reprise/main/Blast%20off%20Counting.PNG");
+    
+}
+/*ID for the Casino web display*/
+#Casino{
+   /*makes the section's background an image*/
+    background-image: url("https://raw.githubusercontent.com/EverWand/Space-Casino/main/You%20Win.PNG");
+
+}
+/*ID for the Click Button web display*/
+#Click{
+    /*makes the section's background an image*/
+    background-image: url("https://raw.githubusercontent.com/EverWand/Event-driven-program/main/click%20the%20button%20Screenshot.PNG");
+}
+/*ID for the Pour Water web display*/
+#Pour{
+    /*makes the section's background an image*/
+    background-image: url("https://raw.githubusercontent.com/EverWand/Theme-Noise-Assignment/main/intro%20snip.PNG");
+
+
+}
+/*ID for the Table Table web display*/
+#TTable{
+    /*makes the section's background an image*/
+    background-image: url("https://raw.githubusercontent.com/EverWand/Tables-of-Tables/main/Table%20Table%20%20Snip.PNG");
+  
+}
+/*ID for the RPG web display*/
+#RPG{
+    /*makes the section's background an image*/
+    background-image: url("https://raw.githubusercontent.com/EverWand/Web-Warrior/main/ShopSnippet.PNG");
+    
+}

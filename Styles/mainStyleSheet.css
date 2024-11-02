@@ -14,7 +14,8 @@
     --P2_DarkShade: #887878;
     --P2_DarkAccent: #333940;
     
-    /*====| Ect. |====*/
+    /*====| Hero Header Sizes |====*/
+    --Primary_Hero_h1: 
 }
 
 /*====| Base Styles |====*/
@@ -29,39 +30,78 @@ body{
 }
 
 footer{
-    background-color: var(--P1_DarkShade);
+    background-color: var(--P1_DarkAccent);
+    color: var(--P1_LightShade);
+    text-align: center;
+    padding: .7em;
 }
 
+.V_Line{
+    width: 3px;
+    background-color: var(--P1_LightShade);
+}
+
+.CalltoAction{
+    font-size: 16px;
+    background-color: var(--P1_DarkShade);
+    color: var(--P1_LightShade);
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.CalltoAction:hover{
+    background-color:#aca4a4;
+}
 
 /*___Nav Bar___*/
-nav ul{
+nav{
+    width: 100%;
+    padding: .5em;
     background-color: var(--P1_DarkAccent);
+    display: flex;
+    position:fixed;
+    z-index: 99;
+
+}
+nav ul{
+    
     list-style: none;
     display: flex;
 }
 .Nav-Item {
     margin: 0 15px;
 }
-.Nav-Item a {
-    text-decoration: none;
-    padding: 10px;
-}
-.Nav-Item a:hover {
-    background-color: var(--P1_DarkAccent);
-    border-radius: 5px;
-}
 .Nav-Item a{
     color: var(--P1_LightShade); 
     text-decoration: none;
     font-size: 18px;
+    padding: 10px;
 }
+.Nav-Item a:hover {
+    background-color: var(--P1_DarkShade);
+    border-radius: 7px;
+}
+
 /*___Hero Section___*/
 #HeroSect{
     background-color: var(--P1_DarkAccent);
     color: var(--P1_LightShade);
     text-align: center;
+    font-size: 3rem;
+    padding: 1em;
 }
+.PrimaryHero{
+    font-size: 2em;
+}
+#Sub_Hero{
+    font-size: 1em;
+}
+
 /*___Content Section___*/
 #ContentSect{
     background-color: var(--P1_LightShade);
+    padding: 1em;
 }
