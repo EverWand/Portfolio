@@ -28,6 +28,15 @@
     margin:.5em;
     background-color: var(--P1_DarkShade);
 }
+
+.ObjNum{
+background-color: var(--P1_LightShade);
+color: var(--P1_DarkShade);
+border-radius: .5em;
+width: fit-content;
+padding: 20px;
+font-size: 32px;
+}
 /*
 .prim_Obj_Item{
     background-color: var(--P1_DarkAccent);
