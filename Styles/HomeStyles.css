@@ -17,13 +17,7 @@
 
 
 /*===================HOME STYLES=========================*/
-#SelfInfo{
-    text-align: end;
-    margin-top: 1em;
-    padding-right: .5em;
-}
 #DisciplineList{
-    text-align: end;
     padding-top: 2em;
     list-style: none;
 }
@@ -32,47 +26,35 @@
     padding-bottom: .5em;
 }
 
-
 /*styles for the image of myself*/
-#SelfImg{
-    /*changes the how the section is positioned*/
-    position:relative;
-    /*makes the background of this sectiopn into an image*/
-    background-image: url("../Images/fancy\ me.png");
-    /*changes the size of the background to cover the section*/
-    background-size: cover;
-    /*gives the section a top margin*/
-    margin-top: 20px;
-    /*gives the section a left margin*/
-    margin-left: 10%;
+#Portrait{
+    image-rendering:optimizeQuality;
     /*Adjusts the height of the section*/
-    height: 500px;
+    width: 75%;
     /*createsa border for this section*/
     border: 10px var(--P1_LightShade) double;
-}
+    border-radius:1em .4em 1.5em 6em;
+} 
 
-/*styles for the heade 1 text inside the container with the image of myself*/
-#SelfImg h1 {
-    /*changes the how the section is positioned*/
-    position:absolute;
-    /*adjusts the bottom position of this section*/
-    bottom:0px;
-    /*adjusts the right position of this section*/
-    right: 5px;
-    /*Changes the color of the text in this section*/
-    color:var(--P1_LightShade);
-    /*gives text an outline around it*/
-    -webkit-text-stroke: 1px var(--P1_DarkShade);
-    /*changes the font size in this section*/
-    font-size: 40px;
-    /*Changes how bold the text is for this section*/
-    font-weight:bolder;
+#HeroSect{
+    padding: 0px;
+    align-content: center;
+}
+/*styles for the header 1 text inside the container with the image of myself*/
+#Left_Hero{
+    padding: 8vh;
+    padding-right: 5vw;
+    font-size: 8vh;
+    align-content: center;
+    text-align:right;
 }
 
 /*Styles for the container holding my information*/
-#selfInfo{
-    /*changes the how the section is positioned*/
-    position:relative;
-    /*gives the section padding*/
-    padding: 5%;
+#Right_Hero {
+    padding: 8vh;
+    background-color:rgba(0, 0, 0, .2);
+    align-content: center;
+    text-align: right;    
+    padding-right: 1em;
+    font-size: 8vh;
 }

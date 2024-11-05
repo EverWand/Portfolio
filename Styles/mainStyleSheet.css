@@ -40,6 +40,10 @@ footer{
     width: 3px;
     background-color: var(--P1_LightShade);
 }
+.H_Line{
+    height: 3px;
+    background-color: var(--P1_LightShade);
+}
 
 .CalltoAction{
     font-size: 16px;
