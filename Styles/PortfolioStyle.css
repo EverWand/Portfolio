@@ -1,15 +1,35 @@
+/*Variables*/
+:root {
+    /*====| Color Palletes |====*/
+    /*____Pallete 1____*/
+    --P1_LightShade: #f9f9f7;
+    --P1_LightAccent: #8a8679;
+    --P1_MainShade: #7d8c9a;
+    --P1_DarkShade: #887878;
+    --P1_DarkAccent: #333940;
+    /*____Pallete 2____*/
+    --P2_LightShade: #f9f9f7;
+    --P2_LightAccent: #8a8679;
+    --P2_MainShade: #7d8c9a;
+    --P2_DarkShade: #887878;
+    --P2_DarkAccent: #333940;
+    
+    /*====| Hero Header Sizes |====*/
+    --Primary_Hero_h1: 
+}
+
 /*styles for the whole portfolio section*/
 #Portfolio{
     /*Changes the color of the text in this section*/
-    color:ghostwhite;
+    color:var(--P1_LightShade);
     /*Changes the color of the section's background*/
-    background-color: black;
+    background-color: var(--P1_DarkAccent);
     /*creates a border for this section*/
-    border: 10px maroon inset;
+    border: 10px var(--P1_DarkShade) inset;
     /*gives the section a margin*/
-    margin:2%;
+    margin:3em;
     /*gives the section padding*/
-    padding: 2%;
+    padding: 2em;
 }
 
 /*For the rows holding the web displays*/

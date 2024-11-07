@@ -15,7 +15,6 @@
     --P2_DarkAccent: #333940;
 }
 
-
 /*===================HOME STYLES=========================*/
 #DisciplineList{
     padding-top: 2em;
@@ -33,7 +32,7 @@
     width: 75%;
     /*createsa border for this section*/
     border: 10px var(--P1_LightShade) double;
-    border-radius:1em .4em 1.5em 6em;
+    border-radius:.5em 2em 1em 5.5em;
 } 
 
 #HeroSect{

@@ -15,6 +15,7 @@
     --P2_DarkAccent: #333940;
     
     /*====| Ect. |====*/
+
 }
 
 /*GENERAL*/
@@ -39,6 +40,16 @@
 }
 
 /*BOARD OBJECTIVES*/
+.ObjNum{
+    background-color: var(--P1_MainShade);
+    color: var(--P1_LightShade);
+    border-radius: 50%;
+    width: fit-content;
+    padding: 0px 10px;
+    font-size: 32px;
+    text-align: center;
+    align-content: center;
+    }
 #Objective{
     display: flex;
     padding-top: 1em;
@@ -47,31 +58,113 @@
 #Objective > h3{
     padding-left: .5em;
     font-size: .9em;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /*Grid of Example [for multiple example cards]*/
 .Obj_Item{
     margin:.5em 0em 2em 0em;
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 10px;
 }
 /*OBJECTIVE CONTENT*/
 .ProjectCard{
+    background-color: var(--P1_MainShade); 
     padding: 2em;
     border-radius: 18px;
-    background-color: var(--P1_MainShade);
+    box-shadow: 2px 4px 1px 0px black;
+    
     min-width: 300px;
+    height: fit-content;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: .5em;
 }
 
-.ObjNum{
-background-color: var(--P1_MainShade);
-color: var(--P1_LightShade);
-border-radius: 50%;
-width: fit-content;
-padding: 0px 10px;
-font-size: 32px;
-text-align: center;
-align-content: center;
+.ProjectCard > p {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: .9em;
+}
+
+.ProjectCard > .CalltoAction{
+    grid-column: 1/-1;
+}
+/*DEBUG: CHECKING BORDERS OF ALL CARD ITEMS
+.ProjectCard *{
+    border: 1px black solid;
+}*/
+
+#ProjectTitle{
+    grid-row: 1;
+    grid-column: 1/-1;
+    color: var(--P1_LightShade);
+    font-size: 2em;
+}
+
+#BriefingLine{
+    grid-row: 2;
+    grid-column: 1/2;
+    text-align:  center;
+    margin-bottom: 1em;
+}
+#BriefingLine > label{
+    font-weight: bolder;
+    color: var(--P1_LightShade);
+}
+
+#ProjectThumbnail{
+    min-width: 300px;
+    min-height: 200px;
+
+    grid-row: 2;
+    grid-column: 2/-1;
+
+    background-color: var(--P2_LightShade);
+    border-radius: .5em;
+    
+    text-align: center;
+    align-content: center;
+}
+
+#ProjectDesc{ 
+    grid-column: 1/-1;
+    grid-row: 3;
+}
+
+#ProjectExtras{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 4;
+    grid-column: 1/-1;
+    gap:.5em;
+}
+.testImage{
+    background-color: var(--P1_LightShade);
+    align-content: center;
+    text-align: center;
+    grid-column:1fr;
+    min-height: 200px;
+    border-radius: .5em;
+}
+
+
+/*=========| SMALL SCREEN SIZE ADJUSTMENTS |========*/
+/* Responsive adjustments for smaller screens */
+@media (max-width: 700px) {
+    .ProjectCard {
+        /* Single column layout for narrow screens */
+        grid-template-columns: 1fr;
+    }
+
+    #ProjectThumbnail {
+        /* Thumbnail appears on top in narrow layouts */
+        grid-column: 1 / -1;
+        order: -1; /* Ensure it appears before other content */
+    }
+
+    #ProjectBrief {
+        grid-column: 1 / -1;
+    }
 }

@@ -45,19 +45,39 @@ footer{
     background-color: var(--P1_LightShade);
 }
 
-.CalltoAction{
+/*CALL TO ACTION BUTTONS*/
+.CalltoAction_Dark{
     font-size: 16px;
-    background-color: var(--P1_DarkShade);
+    background-color: rgba(0, 0, 0, 0.0);
     color: var(--P1_LightShade);
     text-decoration: none;
     width: fit-content;
     height: fit-content;
-    padding: 1em;
-    border-radius: 8px;
+    padding: .6em 1em;
+    border: 1.5px solid var(--P1_DarkAccent);
+    color: var(--P1_DarkAccent);
+    border-radius: .2em .8em .2em .8em;
 }
 
-.CalltoAction:hover{
-    background-color:#aca4a4;
+.CalltoAction_Light{
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: var(--P1_LightShade);
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    padding: .6em 1em;
+    border: 1.5px solid var(--P1_LightShade);
+    color: var(--P1_LightShade);
+    border-radius: .2em .8em .2em .8em;
+}
+
+.CalltoAction_Dark:hover{
+    background-color:var(--P1_DarkShade);
+}
+
+.CalltoAction_Light:hover{
+    background-color: var(--P1_MainShade);
 }
 
 /*___Nav Bar___*/
