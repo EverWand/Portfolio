@@ -1,3 +1,4 @@
+/*Variables*/
 :root {
     /*====| Color Palletes |====*/
     /*____Pallete 1____*/
@@ -16,6 +17,7 @@
     /*====| Ect. |====*/
 }
 
+/*GENERAL*/
 #ContentSect{
     margin:0em 2em;
 }
@@ -24,11 +26,19 @@
     height: 3px;
     background-color: black;
 }
+
+/*BOARD*/
+#BoardContent{
+    margin-top: 3.5em;
+}
+
 #Degree{
     width: fit-content;
     padding-bottom: 1em;
+    margin-top: 2em;
 }
 
+/*BOARD OBJECTIVES*/
 #Objective{
     display: flex;
     padding-top: 1em;
@@ -36,23 +46,23 @@
 }
 #Objective > h3{
     padding-left: .5em;
-    font-size: .8em;
+    font-size: .9em;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
-.Obj_Item{
-    list-style: none;
-    display: flex;
-    justify-content:space-between ;
-    text-align:center;    
-    margin:.5em 0em;
-}
 
-.Obj_Example{
-    width: 49%;
+/*Grid of Example [for multiple example cards]*/
+.Obj_Item{
+    margin:.5em 0em 2em 0em;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+/*OBJECTIVE CONTENT*/
+.ProjectCard{
     padding: 2em;
     border-radius: 18px;
     background-color: var(--P1_MainShade);
-
+    min-width: 300px;
 }
 
 .ObjNum{
