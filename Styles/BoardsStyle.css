@@ -128,6 +128,12 @@
     align-content: center;
 }
 
+#ProjectThumbnail *{
+    height: 100%;
+    width: 100%;
+}
+
+
 #ProjectDesc{ 
     grid-column: 1/-1;
     grid-row: 3;
@@ -140,13 +146,25 @@
     grid-column: 1/-1;
     gap:.5em;
 }
-.testImage{
+.Project_Extra{
+    min-height: 200px;
+
     background-color: var(--P1_LightShade);
     align-content: center;
     text-align: center;
-    grid-column:1fr;
-    min-height: 200px;
+    grid-column:auto;
     border-radius: .5em;
+}
+.Project_Extra *{
+    height: 100%;
+    width: 100%;
+}
+
+#CTA_Box{
+    display: flex;
+    justify-content:space-around;
+    border: 1px black solid;
+    width: 100%;
 }
 
 
