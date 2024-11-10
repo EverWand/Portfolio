@@ -72,6 +72,7 @@
 .ProjectCard{
     background-color: var(--P1_MainShade); 
     padding: 2em;
+    padding-bottom: .5em;
     border-radius: 18px;
     box-shadow: 2px 4px 1px 0px black;
     
@@ -86,10 +87,6 @@
 .ProjectCard > p {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: .9em;
-}
-
-.ProjectCard > .CalltoAction{
-    grid-column: 1/-1;
 }
 /*DEBUG: CHECKING BORDERS OF ALL CARD ITEMS
 .ProjectCard *{
@@ -162,9 +159,14 @@
 
 #CTA_Box{
     display: flex;
+    gap: 2em;
+    text-align: center;
+    grid-column: 1/-1;
     justify-content:space-around;
-    border: 1px black solid;
-    width: 100%;
+    padding: 1em;
+}
+#CTA_Box *{
+    flex: 1;
 }
 
 

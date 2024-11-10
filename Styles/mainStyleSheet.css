@@ -47,7 +47,8 @@ footer{
 
 /*CALL TO ACTION BUTTONS*/
 .CalltoAction_Dark{
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
     background-color: rgba(0, 0, 0, 0.0);
     color: var(--P1_LightShade);
     text-decoration: none;
@@ -60,7 +61,8 @@ footer{
 }
 
 .CalltoAction_Light{
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
     background-color: rgba(0, 0, 0, 0.0);
     color: var(--P1_LightShade);
     text-decoration: none;

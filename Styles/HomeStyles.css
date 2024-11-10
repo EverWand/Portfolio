@@ -15,6 +15,10 @@
     --P2_DarkAccent: #333940;
 }
 
+#ContentSect{
+    padding-top: 1em;
+}
+
 /*===================HOME STYLES=========================*/
 #DisciplineList{
     padding-top: 2em;
@@ -43,7 +47,10 @@
 #Left_Hero{
     padding: 8vh;
     padding-right: 5vw;
+    padding-bottom: 0px;
+
     font-size: 8vh;
+    
     align-content: center;
     text-align:right;
 }
@@ -51,9 +58,36 @@
 /*Styles for the container holding my information*/
 #Right_Hero {
     padding: 8vh;
+    padding-bottom: 0px;
+    padding-right: 1em;
+
     background-color:rgba(0, 0, 0, .2);
+    
     align-content: center;
     text-align: right;    
-    padding-right: 1em;
     font-size: 8vh;
+}
+
+/*=====| TOP WORKS SECTION |=====*/
+
+#TopWorkTitle{
+    text-align: center;
+    font-size: 8vw;
+    color: var(--P1_LightAccent);
+    text-shadow: 1px 1px 1px var(--P1_DarkAccent);
+}
+
+#TopWorks{
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.WorkCard{
+    background-color: var(--P1_MainShade);
+    flex: .5;
+    border-radius: .5em;
+    padding: 2em;
+    padding-top: .5em;
 }
