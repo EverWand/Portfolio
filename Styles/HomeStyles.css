@@ -90,4 +90,27 @@
     border-radius: .5em;
     padding: 2em;
     padding-top: .5em;
+    padding-bottom: 0px;
+    text-align: center;
+}
+.WorkCard *{
+    margin-bottom: 1em;
+}
+#WC_Title{
+    color: var(--P1_LightShade);
+    margin-bottom: .2em;
+}
+#WC_thumbnail{
+    width: 250px;
+    min-height: 100px;
+    border-radius: 1em;
+    border: 3px var(--P1_DarkAccent) solid;
+}
+
+.CTA_Box{
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    gap: 2em;
+    margin-bottom: 0px;
 }
