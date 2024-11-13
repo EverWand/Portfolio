@@ -33,7 +33,7 @@
 #Portrait{
     image-rendering:optimizeQuality;
     /*Adjusts the height of the section*/
-    width: 75%;
+    width: 80%;
     /*createsa border for this section*/
     border: 10px var(--P1_LightShade) double;
     border-radius:.5em 2em 1em 5.5em;
@@ -54,7 +54,9 @@
     align-content: center;
     text-align:right;
 }
-
+#Left_Hero >.CTA_Box{
+    width: fit-content;
+}
 /*Styles for the container holding my information*/
 #Right_Hero {
     padding: 8vh;
@@ -69,48 +71,58 @@
 }
 
 /*=====| TOP WORKS SECTION |=====*/
-
 #TopWorkTitle{
     text-align: center;
     font-size: 8vw;
     color: var(--P1_LightAccent);
     text-shadow: 1px 1px 1px var(--P1_DarkAccent);
 }
-
 #TopWorks{
-    padding: 2em;
+    margin: 0 auto;
+    margin-top: 1em;
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
 }
-.WorkCard{
+.WorkCard {
     background-color: var(--P1_MainShade);
-    flex: .5;
     border-radius: .5em;
-    padding: 2em;
-    padding-top: .5em;
-    padding-bottom: 0px;
-    text-align: center;
-}
-.WorkCard *{
-    margin-bottom: 1em;
+    padding: .2em;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: .2em;
 }
 #WC_Title{
     color: var(--P1_LightShade);
-    margin-bottom: .2em;
-}
-#WC_thumbnail{
-    width: 250px;
-    min-height: 100px;
-    border-radius: 1em;
-    border: 3px var(--P1_DarkAccent) solid;
+    column-gap: 1/-1;
 }
 
-.CTA_Box{
-    justify-content: center;
-    align-content: center;
+.WC_Content{
+    flex:1;
+    background-color: var(--P1_LightShade);
+    width: 95%;
+    margin: 0 auto;
+    border-radius: .3em;
+}
+.WC_Content > img{
+    width: 100%;
+    height: 70%;
+    border-radius: .3em;
+}
+.WC_Content > p {
+    text-align: left;
+    padding: 0em 1em;
+    margin-top: 1em;
+}
+
+.CTA_Box {
     display: flex;
-    gap: 2em;
-    margin-bottom: 0px;
+    gap: 1em;
+    margin-top: auto; /* Pushes the CTA box to the bottom of the card */
+}
+.CTA_Box *{
+    flex: 1;
 }

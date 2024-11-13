@@ -18,6 +18,11 @@
     --Primary_Hero_h1: 
 }
 
+p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: .9em;
+}
+
 /*====| Base Styles |====*/
 *{
     margin: 0;
@@ -28,7 +33,6 @@
 body{ 
     background-color: var(--P1_LightShade);
 }
-
 footer{
     background-color: var(--P1_DarkAccent);
     color: var(--P1_LightShade);
@@ -48,38 +52,40 @@ footer{
 /*CALL TO ACTION BUTTONS*/
 .CalltoAction_Dark{
     font-size: 1rem;
-    font-weight: bold;
     background-color: rgba(0, 0, 0, 0.0);
-    color: var(--P1_LightShade);
-    text-decoration: none;
-    width: fit-content;
-    height: fit-content;
-    padding: .6em 1em;
-    border: 1.5px solid var(--P1_DarkAccent);
     color: var(--P1_DarkAccent);
+
+    font-weight: bold;
+    text-decoration: none;
+    
+    padding: .6em 1em;
+    
+    border: 1.5px solid var(--P1_DarkAccent);
     border-radius: .2em .8em .2em .8em;
 }
-
 .CalltoAction_Light{
-    font-size: 1rem;
-    font-weight: bold;
     background-color: rgba(0, 0, 0, 0.0);
     color: var(--P1_LightShade);
+    
+    font-size: 1rem;
+    font-weight: bold;
     text-decoration: none;
-    width: fit-content;
-    height: fit-content;
+    
     padding: .6em 1em;
+    
     border: 1.5px solid var(--P1_LightShade);
-    color: var(--P1_LightShade);
     border-radius: .2em .8em .2em .8em;
 }
 
 .CalltoAction_Dark:hover{
-    background-color:var(--P1_DarkShade);
+    color: #464b52;
+    border-color: #464b52;
+    box-shadow: 0px 1px 0px 0px black;
 }
-
 .CalltoAction_Light:hover{
-    background-color: var(--P1_MainShade);
+
+    color: #bebebe;
+    border-color: #bebebe;
 }
 
 /*___Nav Bar___*/

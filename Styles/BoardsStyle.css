@@ -70,7 +70,7 @@
 }
 /*OBJECTIVE CONTENT*/
 .ProjectCard{
-    background-color: var(--P1_MainShade); 
+    background-color: var(--P1_MainShade);
     padding: 2em;
     padding-bottom: .5em;
     border-radius: 18px;
@@ -83,15 +83,6 @@
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: .5em;
 }
-
-.ProjectCard > p {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: .9em;
-}
-/*DEBUG: CHECKING BORDERS OF ALL CARD ITEMS
-.ProjectCard *{
-    border: 1px black solid;
-}*/
 
 #ProjectTitle{
     grid-row: 1;
@@ -128,6 +119,7 @@
 #ProjectThumbnail *{
     height: 100%;
     width: 100%;
+    border-radius: .5em;
 }
 
 
