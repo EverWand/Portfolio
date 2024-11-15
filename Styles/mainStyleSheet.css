@@ -32,12 +32,16 @@ p{
 
 body{ 
     background-color: var(--P1_LightShade);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 footer{
     background-color: var(--P1_DarkAccent);
     color: var(--P1_LightShade);
     text-align: center;
     padding: .7em;
+    margin-top: auto;
 }
 
 .V_Line{
@@ -88,6 +92,22 @@ footer{
     border-color: #bebebe;
 }
 
+#CTA_Box{
+    display: flex;
+    flex-direction: row;
+    gap:.5em;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+#CTA_Box *{
+    flex: 1;
+    min-width: fit-content;
+    max-width: 500px;
+    text-align: center;
+}
 /*___Nav Bar___*/
 nav{
     width: 100%;
@@ -96,16 +116,13 @@ nav{
     display: flex;
     position:fixed;
     z-index: 99;
-
 }
 nav ul{
-    
     list-style: none;
     display: flex;
+    gap: .5em;
 }
-.Nav-Item {
-    margin: 0 15px;
-}
+
 .Nav-Item a{
     color: var(--P1_LightShade); 
     text-decoration: none;

@@ -18,6 +18,15 @@
     --Primary_Hero_h1: 
 }
 
+#BackupPorfolio{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 2em;
+}
+
+/*======| OLD STYLES |=======*/
 /*styles for the whole portfolio section*/
 #Portfolio{
     /*Changes the color of the text in this section*/

@@ -81,7 +81,7 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: .5em;
+    gap: 1em;
 }
 
 #ProjectTitle{
@@ -103,8 +103,7 @@
 }
 
 #ProjectThumbnail{
-    min-width: 300px;
-    min-height: 200px;
+    min-height: 250px;
 
     grid-row: 2;
     grid-column: 2/-1;
@@ -115,7 +114,6 @@
     text-align: center;
     align-content: center;
 }
-
 #ProjectThumbnail *{
     height: 100%;
     width: 100%;
@@ -150,15 +148,7 @@
 }
 
 #CTA_Box{
-    display: flex;
-    gap: 2em;
-    text-align: center;
     grid-column: 1/-1;
-    justify-content:space-around;
-    padding: 1em;
-}
-#CTA_Box *{
-    flex: 1;
 }
 
 

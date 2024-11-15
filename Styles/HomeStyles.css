@@ -19,7 +19,35 @@
     padding-top: 1em;
 }
 
-/*===================HOME STYLES=========================*/
+#HeroSect{
+    padding: 0px;
+}
+/*styles for the header 1 text inside the container with the image of myself*/
+#Right_Hero{
+    padding: 8vh;
+    padding-right: 5vw;
+    padding-bottom: .2em;
+
+    font-size: 8vh;
+    
+    align-content: center;
+    text-align:right;
+}
+
+/*Styles for the container holding my information*/
+#Left_Hero {
+    padding: 8vh;
+    padding-bottom: .2em;
+    padding-right: 1em;
+
+    background-color:rgba(0, 0, 0, .2);
+    
+    text-align: right;    
+    font-size: 8vh;
+}
+#Left_Hero > .CTA_Box > a{
+    font-size: .5em;
+}
 #DisciplineList{
     padding-top: 2em;
     list-style: none;
@@ -33,43 +61,11 @@
 #Portrait{
     image-rendering:optimizeQuality;
     /*Adjusts the height of the section*/
-    width: 80%;
+    width: 70%;
     /*createsa border for this section*/
     border: 10px var(--P1_LightShade) double;
     border-radius:.5em 2em 1em 5.5em;
 } 
-
-#HeroSect{
-    padding: 0px;
-    align-content: center;
-}
-/*styles for the header 1 text inside the container with the image of myself*/
-#Left_Hero{
-    padding: 8vh;
-    padding-right: 5vw;
-    padding-bottom: 0px;
-
-    font-size: 8vh;
-    
-    align-content: center;
-    text-align:right;
-}
-#Left_Hero >.CTA_Box{
-    width: fit-content;
-}
-/*Styles for the container holding my information*/
-#Right_Hero {
-    padding: 8vh;
-    padding-bottom: 0px;
-    padding-right: 1em;
-
-    background-color:rgba(0, 0, 0, .2);
-    
-    align-content: center;
-    text-align: right;    
-    font-size: 8vh;
-}
-
 /*=====| TOP WORKS SECTION |=====*/
 #TopWorkTitle{
     text-align: center;
@@ -82,7 +78,7 @@
     margin-top: 1em;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1em;
 }
 .WorkCard {
@@ -116,13 +112,4 @@
     text-align: left;
     padding: 0em 1em;
     margin-top: 1em;
-}
-
-.CTA_Box {
-    display: flex;
-    gap: 1em;
-    margin-top: auto; /* Pushes the CTA box to the bottom of the card */
-}
-.CTA_Box *{
-    flex: 1;
 }
