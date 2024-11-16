@@ -103,12 +103,10 @@
     /*gives the section bottom padding*/
     padding-bottom: 50px;
 }
-
 /*ID for the Countdown web display*/
 #CountDown{
     /*makes the section's background an image*/
-    background-image: url("https://raw.githubusercontent.com/EverWand/Blast-Off-Reprise/main/Blast%20off%20Counting.PNG");
-    
+    background-image: url("https://raw.githubusercontent.com/EverWand/Blast-Off-Reprise/main/Blast%20off%20Counting.PNG"); 
 }
 /*ID for the Casino web display*/
 #Casino{

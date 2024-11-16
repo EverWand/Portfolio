@@ -46,7 +46,8 @@
     font-size: 8vh;
 }
 #Left_Hero > .CTA_Box > a{
-    font-size: .5em;
+    min-width: 3em;
+    font-size: 40%;
 }
 #DisciplineList{
     padding-top: 2em;
