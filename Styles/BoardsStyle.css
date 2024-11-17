@@ -48,14 +48,65 @@
     padding: 0px 10px;
     font-size: 32px;
     text-align: center;
-    align-content: center;
-    }
-#Objective{
+}
+#SidePanel {
+    color: var(--P1_LightShade);
+    position:fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 50px;
+    width: fit-content;
+    text-align: center;
+    margin-top: 10vh;
+}
+.objNav{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    width: 10%; /* Default width before hover */
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+
+    align-items: center;
+    padding: 8px;
+    height: 30vh;
+    transition: 0.3s ease; /* Smooth transition for hover effect */
+    content-visibility: hidden;
+}
+.objNav_Label{
+    width: 100%;
+}
+
+.ObjNumBox {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping */
+    gap: 8px;
+    justify-content: flex-start; /* Align items horizontally */
+    align-content: flex-start; /* Align wrapped rows to the top */
+    width: 40%; /* Ensure the box takes full width of the expanded container */
+    height: 100%; /* Ensure it takes the height of the container */
+    box-sizing: border-box;
+}
+.ObjNumBox > a {
+    text-decoration: none;
+}
+
+.objNav:hover{
+    content-visibility:visible;
+    width: 90%; /* Expand container width on hover */
+}
+
+
+.Objective{
     display: flex;
     padding-top: 1em;
     align-items: center;
 }
-#Objective > h3{
+.Objective > h3{
     padding-left: .5em;
     font-size: .9em;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
