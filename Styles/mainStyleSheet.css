@@ -36,6 +36,13 @@ body{
     flex-direction: column;
     min-height: 100vh;
 }
+#HeroSect{
+    padding: 0px 2em;
+}
+#ContentSect{
+    padding: 0px 600px;
+}
+
 footer{
     background-color: var(--P1_DarkAccent);
     color: var(--P1_LightShade);
