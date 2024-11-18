@@ -49,6 +49,8 @@
     font-size: 32px;
     text-align: center;
 }
+
+/*___SIDE PANEL NAV___*/
 #SidePanel {
     color: var(--P1_LightShade);
     position:fixed;
@@ -63,7 +65,7 @@
 }
 .objNav{
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
+    border-radius:0px  8px 8px 0px ;
     width: 10%; /* Default width before hover */
     overflow: hidden;
     
@@ -72,15 +74,14 @@
     gap:8px;
 
     align-items: center;
-    padding: 8px;
+    padding:8px;
     height: 30vh;
-    transition: 0.3s ease; /* Smooth transition for hover effect */
+    transition: 0.5s ease-in-out; /* Smooth transition for hover effect */
     content-visibility: hidden;
 }
 .objNav_Label{
     width: 100%;
 }
-
 .ObjNumBox {
     display: flex;
     flex-wrap: wrap; /* Enable wrapping */
@@ -142,6 +143,9 @@
     font-size: 2em;
 }
 
+#ProjectBrief{
+    align-content: center;
+}
 #BriefingLine{
     grid-row: 2;
     grid-column: 1/2;
@@ -155,7 +159,7 @@
 
 #ProjectThumbnail{
     min-height: 250px;
-
+    
     grid-row: 2;
     grid-column: 2/-1;
 
@@ -179,7 +183,7 @@
 
 #ProjectExtras{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     grid-row: 4;
     grid-column: 1/-1;
     gap:.5em;
@@ -196,6 +200,7 @@
     
 }
 .Project_Extra *{
+    border-radius: 8px;
     height: 100%;
     width: 100%;
     grid-column: 1fr;
