@@ -52,6 +52,36 @@
 }
 
 #EduBox{
-    visibility: hidden; /*DEBUG*/
+    /*visibility: hidden; DEBUG*/
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    gap:2em;
 }
 
+
+.eduInfo{
+    color: var(--P1_LightShade);
+    padding: 2em;
+    padding-top: 1em;
+    background-color: var(--P1_MainShade);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+}
+.eduInfo > p {
+    color: var(--P1_DarkAccent);
+}
+
+#DegreeBox{
+    margin-top: .5em;
+    display: flex;
+    flex-direction: row; 
+}
+.degree{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
