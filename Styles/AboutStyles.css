@@ -1,0 +1,57 @@
+/*Variables*/
+:root {
+    /*====| Color Palletes |====*/
+    /*____Pallete 1____*/
+    --P1_LightShade: #f9f9f7;
+    --P1_LightAccent: #8a8679;
+    --P1_MainShade: #7d8c9a;
+    --P1_DarkShade: #887878;
+    --P1_DarkAccent: #333940;
+    /*____Pallete 2____*/
+    --P2_LightShade: #f9f9f7;
+    --P2_LightAccent: #8a8679;
+    --P2_MainShade: #7d8c9a;
+    --P2_DarkShade: #887878;
+    --P2_DarkAccent: #333940;
+    
+    /*====| Hero Header Sizes |====*/
+    --Primary_Hero_h1: 
+}
+
+
+#BioBox{
+    margin: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    gap: .5em;
+    height: fit-content;
+    width: fit-content;
+
+}
+#BioBox > .V_Line{
+    background-color: var(--P1_DarkAccent);
+}
+
+#Bio_txt{
+    flex: 1;
+    max-width: 50vw;
+    min-width: 40vw;
+    margin: 0 auto;
+}
+
+#Bio_img{
+    flex: 1;
+    image-rendering:optimizeQuality;
+    max-width: 350px;
+    max-height: 500px;
+    /*createsa border for this section*/
+    border: 10px var(--P1_LightShade) double;
+    border-radius:.5em 2em 1em 5.5em;
+    margin: 0 auto;
+}
+
+#EduBox{
+    visibility: hidden; /*DEBUG*/
+}
+

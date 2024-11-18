@@ -68,6 +68,12 @@
     border-radius:.5em 2em 1em 5.5em;
 } 
 /*=====| TOP WORKS SECTION |=====*/
+#WorkShowcaseBox{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0px 2em;
+}
 #TopWorkTitle{
     text-align: center;
     font-size: 8vw;
