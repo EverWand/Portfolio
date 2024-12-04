@@ -40,7 +40,7 @@ body{
     padding: 0px 2em;
 }
 #ContentSect{
-    padding: 0px 600px;
+    margin: 2em 2em;
 }
 
 footer{
@@ -100,8 +100,7 @@ footer{
 }
 
 #CTA_Box{
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     gap:.5em;
     width: 90%;
     margin: 0 auto;
@@ -111,7 +110,6 @@ footer{
 
 #CTA_Box *{
     flex: 1;
-    min-width: fit-content;
     max-width: 500px;
     text-align: center;
 }
@@ -159,5 +157,5 @@ nav ul{
 /*___Content Section___*/
 #ContentSect{
     background-color: var(--P1_LightShade);
-    padding: 2em;
+    padding: 2em 5em;
 }

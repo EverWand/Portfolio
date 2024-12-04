@@ -48,7 +48,7 @@
 
     </section>
     <!--Content-->
-    <section id="contentSect">
+    <section id="ContentSect">
         <div id="BioBox">
             <div id = "Bio_txt">
                 <h1 style="text-decoration: underline;padding: .5em;">Who's Me?</h1>
@@ -62,38 +62,51 @@
         </div>
         <!--EDUCATION DETAILS-->
         <div id = "EduBox">
-                <h1 style="text-decoration: underline;padding: .5em;">
-                    Education
-                </h1>
+            <h1 id = "EduTitle" style = "grid-row: 1; grid-column: 1/-1;"class="aboutSectHeader">
+                Education
+            </h1>
 
-            <div id="NBHS" class="eduInfo">
-                <h1>North Bend Highschool</h1>
-                <p>Valedictorian</p>
-                <p>4.0 GPA</p>
-                <h3>Honor's Diploma</h3>
-                <h4>Emphasis:</h4>
-                <p>Advanced Mathematics, Science, Technology, English</p>
+            <div id="NBHS" style = "grid-row: 2; grid-column: 1;" class="eduInfo">
+                <div>
+                    <h1>North Bend Highschool</h1>
+                    <p>Valedictorian</p>
+                    <p>4.0 GPA</p>
+                </div>
+                
+                <div>
+                    <h3>Honor's Diploma</h3>
+                    <div>
+                        <h4>Emphasis:</h4> <p style="color: #333940;">Advanced Mathematics, Technology</p>
+                    </div>
+                    
+                </div>
+                
             </div>
-            <div id="SWOCC" class="eduInfo">
+            <div id="SWOCC" style = "grid-row: 2; grid-column: 2;" class="eduInfo">
                 <h1>Southwestern Community College</h1>
                 <p>Thanks to the Upward Bound Program, I spent my summers during high school at SWOCC. Taking these classes that helped me understand advanced mathematics and physics along with leadership.</p>
             </div>
-            <div id="UAT" class="eduInfo">
+            <div id="UAT" style = "grid-row: 3; grid-column: 1/-1;" class="eduInfo">
                 <h1>University of Advancing Technology</h1>
                 <p>UAT focuses on project-based work taught by people with experience in the industries they teach. We are taught and apply industry standards including the AGILE and Scrum Methods into our work. Here I met tons of passionate and talented peers whom I have had the honor to collaborate with and learn from.</p>
+                <hr style="margin-top: 2em;">
                 <div id="DegreeBox">
                     <div class="degree">
-                        <h1>Advancing Computer Science</h1>
-                        <h3>Bachelor's Degree</h3>
+                        <div>
+                            <label>Bachelor's Degree</label>
+                            <h2>Advancing Computer Science</h2>
+                        </div>
                         <div id="CTA_Box">
-                            <a class="CalltoAction_Dark" href="./board.html">Degree Objectives</a>
+                            <a class="CalltoAction_Light" href="./board.html">Degree Objectives</a>
                         </div>
                     </div>
                     <div class="degree">
-                        <h1>Game Programming</h1>
-                        <h3>Bachelor's Degree</h3>
+                        <div>
+                            <label>Bachelor's Degree</label>
+                            <h2>Game Programming</h2> 
+                        </div>
                         <div id="CTA_Box">
-                            <a class="CalltoAction_Dark" href="./board.html">Degree Objectives</a>
+                            <a class="CalltoAction_Light" href="./board.html">Degree Objectives</a>
                         </div>
                     </div>
                 </div>
