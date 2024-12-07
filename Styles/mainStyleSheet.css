@@ -37,10 +37,10 @@ body{
     min-height: 100vh;
 }
 #HeroSect{
-    padding: 0px 2em;
+    padding: 0px 5em;
 }
 #ContentSect{
-    margin: 2em 2em;
+    margin: 2em 5em;
 }
 
 footer{
@@ -71,7 +71,7 @@ footer{
     
     padding: .6em 1em;
     
-    border: 1.5px solid var(--P1_DarkAccent);
+    border: .2em, double, var(--P1_DarkAccent);
     border-radius: .2em .8em .2em .8em;
 }
 .CalltoAction_Light{
@@ -84,8 +84,8 @@ footer{
     
     padding: .6em 1em;
     
-    border: 1.5px solid var(--P1_LightShade);
-    border-radius: .2em .8em .2em .8em;
+    border: .2em, double, var(--P1_LightShade);
+    border-radius: .2em 1em .2em 1em;
 }
 
 .CalltoAction_Dark:hover{

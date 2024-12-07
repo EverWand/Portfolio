@@ -52,7 +52,6 @@
 
 /*___SIDE PANEL NAV___*/
 #SidePanel {
-    color: var(--P1_LightShade);
     position:fixed;
     left: 0;
     display: flex;
@@ -64,7 +63,9 @@
     margin-top: 10vh;
 }
 .objNav{
-    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--P1_LightShade);
+    border: .5em  var(--P1_LightShade) double;
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius:0px  8px 8px 0px ;
     width: 10%; /* Default width before hover */
     overflow: hidden;
@@ -94,6 +95,9 @@
 }
 .ObjNumBox > a {
     text-decoration: none;
+}
+.objNav >.ObjNumBox > .ObjNum:hover {
+    box-shadow: 0px 0px 1em 0px var(--P1_LightAccent);
 }
 
 .objNav:hover{
@@ -126,6 +130,7 @@
     padding: 2em;
     padding-bottom: .5em;
     border-radius: 18px;
+    border: .2em double var(--P1_LightShade);
     box-shadow: 2px 4px 1px 0px black;
     
     min-width: 300px;

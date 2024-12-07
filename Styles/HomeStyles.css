@@ -90,7 +90,10 @@
 }
 .WorkCard {
     background-color: var(--P1_MainShade);
+
+    border:.2em double var(--P1_LightShade);
     border-radius: .5em;
+    
     padding: .2em;
 
     display: flex;

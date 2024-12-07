@@ -20,7 +20,6 @@
 
 .aboutSectHeader{
     text-decoration: underline;
-    padding: 2em;
 }
 
 #BioBox{
@@ -60,6 +59,7 @@
     grid-column: 1/-1;
 }
 .eduInfo{
+    border: .2em, var(--P2_LightShade), double;
     box-shadow: black 3px 4px;
     color: var(--P1_LightShade);
     padding: 1em 2em;
