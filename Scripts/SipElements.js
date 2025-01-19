@@ -6,7 +6,7 @@ var sipTraitTag = "trait";
 //Make Trait Cards
 class traitCardS{
     //Contrstructor
-    traitCardS(){
+    constructor(){
         
     }
 };

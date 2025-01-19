@@ -9,35 +9,13 @@
     <link rel="stylesheet" href="../Styles/mainStyleSheet.css">
     <link rel="stylesheet" href="../Styles/SIP_Styles.css">
     <!--Attatch Scripts-->
+    <script src="../Scripts/global.js" defer></script>
+    <script src="../Scripts/sipElements.js" defer></script>
 </head>
 
 <body>
     <!--Navigation bar-->
-    <nav>
-        <img id = "Nav-Logo" href="../Images/Branding/EverLogo-Revision.png">
-        <ul>
-            <!--HOME PAGE-->
-            <li id = "NavOpt_Home"class = "Nav-Item">
-                <a href="../index.html">Home</a>
-            </li>
-            <!--PORTFOLIO-->
-            <li id = "NavOpt_Portfolio"class = "Nav-Item">
-                <a href="./portfolio.html">Portfolio</a>
-            </li>
-            <!--BOARDS-->
-            <li id = "NavOpt_Objectives" class = "Nav-Item">
-                <a href="./board.html">Objectives</a>
-            </li>
-            <!--ABOUT-->
-            <li id = "NavOpt_About"class = "Nav-Item">
-                <a href="./about.html">About Me</a>
-            </li>
-            <!--CONTACT-->
-            <li id = "NavOpt_Contact"class = "Nav-Item">
-                <a href="./contact.html">Contact</a>
-            </li>
-        </ul> 
-    </nav>
+    <nav id="NavBar"></nav>
     <!--Hero Section-->
     <section id="HeroSect">
         <h1 style="padding-bottom: .5em;">Loom</h1>
@@ -45,16 +23,53 @@
         <h2> Weave your ideas. </h2>
     </section>
     <section id="ContentSect">
-        <span id = "OverviewDiv">
-            <div id = ></div>
-        </span>
-        <span id = "TraitsDiv"></span>
-        <span id="LogsDiv"></span>
+        <div id = "OverviewDiv">
+            <div id = "SipDesc" style="flex: 1;">
+                <h2>What is Loom</h2>
+                <p>Lerom ipsum</p>
+            </div>
+            <img src="" alt="Image/Video of SIP Prototype" style="flex: 1;">
+        </div>
+        <hr>
+        <div id = "TraitsDiv" stylse="display: grid;">
+            <!--Set Trait Cards Here-->
+            <div class="Trait" style="grid-column: 1; grid-row: 1; display: flex;">
+                <img src="" alt="Icon" style="height: 36px; width: 36px;">
+                <h1>Trait 1</h1>
+            </div>
+            <!--Set Trait Cards Here-->
+            <div class="Trait" style="grid-column: 2; grid-row: 1; display: flex;">
+                <img src="" alt="Icon" style="height: 36px; width: 36px;">
+                <h1>Trait 2</h1>
+            </div>
+            <!--Set Trait Cards Here-->
+            <div class="Trait" style="grid-column: 1; grid-row: 2; display: flex;" >
+                <img src="" alt="Icon" style="height: 36px; width: 36px;">
+                <h1>Trait 3</h1>
+            </div>
+            <!--Set Trait Cards Here-->
+            <div class="Trait" style="grid-column: 2; grid-row: 2; display: flex;">
+                <img src="" alt="Icon" style="height: 36px; width: 36px;">
+                <h1>Trait 4</h1>
+            </div>
+        </div>
+        <hr>
+        <div id="LogsDiv">
+            <h1>Progress Logs</h1>
+            <!--Set Devlog Cards Here-->
+            <div class="DevCard" style="display: flex; flex-direction: row; width: 100vw; margin: 2;">
+                <img src="" alt="Thumbnail" style="flex: 1;">
+                <div class = "DC_Content" style="flex: 5;">
+                    <h3>Title</h3>
+                    <p>breif description of progress</p>
+                </div>
+            </div>
+        </div>
     </section>
     <!--Footer-->
     <footer>
         <p>Page made by Lucas Foxworthy</p>
         <hr>
-        <p>Last Updated: 11/18/2024</p>
+        <p>Website Last Updated: 1/19/2025</p>
     </footer>
 </body>

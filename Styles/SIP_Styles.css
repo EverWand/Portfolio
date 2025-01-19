@@ -1,7 +1,7 @@
 #OverviewDiv{
-
+    display: flex;
+    flex-direction: row;
 }
 #TraitsDiv{
-
+    
 }
-#LogsDiv{}
