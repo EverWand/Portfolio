@@ -1,11 +1,54 @@
+#ContentSect > div{
+    padding: 2em 0px;
+}
+
 #OverviewDiv{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    gap: 2em;
+    max-width: 80%;
 }
 
-.Trait{
-    display: flex;
+#SipDesc{
+    max-width: 60%;
 }
-.Trait > img{
+
+#OverviewDiv > img{
+    height: 300px; 
+    max-width: 250px;
+    border-radius: 8px;
+}
+
+#TraitsDiv{
+    display: grid;
+    gap: 2em;
+}
+.trait{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: fit-content;
+}
+.trait > img{
     height: 36px; width: 36px;
+    border-radius: 50%;
+}
+
+#LogsDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.devCard{
+    display: flex;
+    border: 1px solid black;
+    gap: 1em;
+    padding: .5em;
+    max-width: 50vw;
+}
+.devCard > img{
+    height: 100px; width: 100px;
+    border-radius: 8px;
 }

@@ -1,3 +1,6 @@
+const PlaceHolderImg = "../Images/PlaceholderLC.png";
+
+
 var isIndexLevel = false;
 
 class NavBar {
@@ -51,14 +54,6 @@ class NavBar {
         listItem.appendChild(link);
         navOptions.appendChild(listItem);
     }
-}
-
-function create_Footer(){
-    const content = ''
-    
-    const footer = document.getElementById("footer");
-
-    footer.appendChild(content);
 }
 
 
