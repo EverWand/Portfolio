@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: row;
 }
-#TraitsDiv{
-    
+
+.Trait{
+    display: flex;
+}
+.Trait > img{
+    height: 36px; width: 36px;
 }
