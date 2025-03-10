@@ -43,14 +43,6 @@ body{
     margin: 2em 5em;
 }
 
-footer{
-    background-color: var(--P1_DarkAccent);
-    color: var(--P1_LightShade);
-    text-align: center;
-    padding: .7em;
-    margin-top: auto;
-}
-
 .V_Line{
     width: 3px;
     background-color: var(--P1_LightShade);
@@ -60,83 +52,12 @@ footer{
     background-color: var(--P1_LightShade);
 }
 
-/*CALL TO ACTION BUTTONS*/
-.CalltoAction_Dark{
-    font-size: 1rem;
-    background-color: rgba(0, 0, 0, 0.0);
-    color: var(--P1_DarkAccent);
-
-    font-weight: bold;
-    text-decoration: none;
-    
-    padding: .6em 1em;
-    
-    border: .2em, double, var(--P1_DarkAccent);
-    border-radius: .2em .8em .2em .8em;
-}
-.CalltoAction_Light{
-    background-color: rgba(0, 0, 0, 0.0);
-    color: var(--P1_LightShade);
-    
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    
-    padding: .6em 1em;
-    
-    border: .2em, double, var(--P1_LightShade);
-    border-radius: .2em 1em .2em 1em;
-}
-
-.CalltoAction_Dark:hover{
-    color: #464b52;
-    border-color: #464b52;
-    box-shadow: 0px 1px 0px 0px black;
-}
-.CalltoAction_Light:hover{
-
-    color: #bebebe;
-    border-color: #bebebe;
-}
-
 #CTA_Box{
     display: inline-flex;
     gap:.5em;
     width: 90%;
     margin: 0 auto;
     justify-content: center;
-
-}
-
-#CTA_Box *{
-    flex: 1;
-    max-width: 500px;
-    text-align: center;
-}
-/*___Nav Bar___*/
-nav{
-    width: 100%;
-    padding: .5em;
-    background-color: var(--P1_DarkAccent);
-    display: flex;
-    position:fixed;
-    z-index: 99;
-}
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: .5em;
-}
-
-.Nav-Item a{
-    color: var(--P1_LightShade); 
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-}
-.Nav-Item a:hover {
-    background-color: var(--P1_DarkShade);
-    border-radius: 7px;
 }
 
 /*___Hero Section___*/
