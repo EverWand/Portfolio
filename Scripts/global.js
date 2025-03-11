@@ -1,4 +1,5 @@
-const PlaceHolderImg = "../Images/PlaceholderLC.png";
+const PLACE_HOLDER_IMG = "../Images/PlaceholderLC.png";
+const ROOT_PATH = getRootPath();
 
 class NavBar {
     constructor() {
@@ -44,8 +45,7 @@ class NavBar {
         li.className = "Nav-Item";
         
         // Set the path base for the link, based on root folder
-        const rootPath = window.location.pathname.includes('/Pages/') ? '../' : './';
-        const fullPath = `${rootPath}${href}`;
+        const fullPath = ROOT_PATH + `${href}`;
         
         const a = document.createElement("a");
         a.href = fullPath;
@@ -144,30 +144,21 @@ class CTAButton extends HTMLElement {
         this.shadowRoot.appendChild(style);
     }
 }
-
 customElements.define('cta-button', CTAButton);
 
 
-// Initialize the navigation bar
-document.addEventListener("DOMContentLoaded", () => {
-    // Pass `true` for index.html level or `false` for pages folder
-    isIndexLevel = window.location.pathname.endsWith("index.html");
-
-    new NavBar();
-});
-
-//FOOTER DISPLAY
-document.addEventListener("DOMContentLoaded", () => {
+/* Footer Display */
+function displayFooter() {
     const footer = document.createElement("footer");
     footer.innerHTML = `
     <div id="FooterContent">
         <div id="FooterLogo">
-            <img src="./Images/Branding/EverLogo-Revision.png" alt="Site Logo">
+            <img src="${ROOT_PATH}/Images/Branding/EverLogo-Revision.png" alt="Site Logo">
         </div>
         <div id="FooterText">
             <p>Page Created by Lucas Foxworthy</p>
             <hr>
-            <p>Last Updated: 3/10/2025</p>
+            <p>Last Updated: 3/11/2025</p>
         </div>
     </div>
     `;
@@ -195,5 +186,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     `;
     
-    document.head.appendChild(style)
+    document.head.appendChild(style);
+}
+
+/* Returns the path to the 'Portfolio' root folder*/
+function getRootPath() {
+    //split the path into an array by '/'
+    const pathArray = window.location.pathname.split('/');
+    //find the index of the 'Portfolio' folder
+    const portfolioIndex = pathArray.indexOf('Portfolio');
+    //if the 'Portfolio' folder is found, return the path up to and including the 'Portfolio' folder
+    if (portfolioIndex !== -1) {
+        //join the path back together up until the 'Portfolio' folder
+        return pathArray.slice(0, portfolioIndex + 1).join('/') + '/';
+    }
+    //if the 'Portfolio' folder is not found, return the parent path
+    return './';
+}
+
+/*=====| ON PAGE LOAD |=====*/
+document.addEventListener("DOMContentLoaded", () => {
+    new NavBar();
+    displayFooter();
 });

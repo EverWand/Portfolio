@@ -1,31 +1,26 @@
-
 const LOGCARD_TAG = "devCard";
 const TRAIT_TAG = "trait";
 
-var isIndexLevel = true;
-
-//Make Trait Cards
-class TraitCards{
-    
-    //Contrstructor
-    constructor(columnLimit){
+// Make Trait Cards
+class TraitCards {
+    // Constructor
+    constructor(columnLimit) {
         this.currCol = 1;
         this.currRow = 1;
         this.colLimit = columnLimit;
 
-        for(let i=1; i <= 4; i++){
+        for (let i = 1; i <= 4; i++) {
             const traitLabel = `Trait ${i}`;
-            this.InsertTrait("../Images/PlaceholderLC.png", traitLabel)
+            this.InsertTrait(`$../Images/PlaceholderLC.png`, traitLabel);
         }
     }
 
-    InsertTrait(iconPath, traitLabel){        
-        if(this.currCol > this.colLimit)
-        {
-            this.currCol=1; 
+    InsertTrait(iconPath, traitLabel) {
+        if (this.currCol > this.colLimit) {
+            this.currCol = 1;
             this.currRow++;
         }
-    
+
         const traitPos = `grid-column: ${this.currCol}; grid-row: ${this.currRow};`;
         const content = document.createElement("div");
         content.className = TRAIT_TAG;
@@ -35,51 +30,82 @@ class TraitCards{
         document.getElementById("TraitsDiv").appendChild(content);
         this.currCol++;
     }
-};
-//Create Devlog Entry System
-class DevLog{
+}
+
+// Create Devlog Entry Tag
+class DevLog extends HTMLElement {
     constructor(){
-        this.AddLog("First Log", "../Images/PlaceholderLC.png","../Pages/sip.html", "This is to test the log cards");
-        this.AddLog("Second Log", "../Images/PlaceholderLC.png","../Pages/sip.html", "This is to test the log cards");
-        this.AddLog("Third Log", "../Images/PlaceholderLC.png","../Pages/sip.html", "This is to test the log cards");
-    };
-    AddLog(Label,Thumbnail,portal="",description=""){
+        super();
+        this.attachShadow({ mode: 'open' });
+    }
+    
+    connectedCallback() {
+        const label = this.getAttribute('label') || 'Label';
+        const thumbnail = this.getAttribute('thumbnail') || '../Images/Branding/EverLogo-Revision.png';
+        const portal = this.getAttribute('portal') || null;
+
+        // Move innerHTML content to a variable
+        const content = this.innerHTML;
+        this.innerHTML = ''; // Clear the innerHTML
+
+        this.addLog(label, thumbnail, portal, content);
+        this.addStyle();
+    }
+
+    addLog(label, thumbnailPath, portal = null, content = "") {
+        //|__LOG CONTAINER
         const log = document.createElement("div");
         log.className = LOGCARD_TAG;
-        
-        //THUMBNAIL
-        const thumbnail = document.createElement("img");
-        thumbnail.src = Thumbnail; thumbnail.alt = "Thumbnail";
-        log.appendChild(thumbnail);
-        
-        //INFORMATION
+
+        //|__THUMBNAIL
+        const thumbnailImg = document.createElement("img");
+
+        thumbnailImg.src = thumbnailPath;
+        thumbnailImg.alt = "Thumbnail";
+        /* Add thumbnail to Log container*/
+        log.appendChild(thumbnailImg);
+
+        //|__INFORMATION
         const InfoBox = document.createElement("div");
         InfoBox.className = "logInfo";
+        /* Add Info to Log container */
         log.appendChild(InfoBox);
-        //|__LABEL
-        InfoBox.innerHTML = `<h1>${Label}</h1>`;
-        //|__DESCRIPTION
-        const descBox = document.createElement("div");
-        descBox.className = "logDesc";
-        descBox.innerHTML = `<p>${description}</p>`;
-        InfoBox.appendChild(descBox);
-        //|__CTA - READ MORE BUTTON
-        if (portal != "") {
+        
+        // |__LABEL
+        InfoBox.innerHTML = `<h1>${label}</h1>`;
+        // |__LogContent
+        const logContent = document.createElement("div");
+        logContent.className = "logContent";
+        logContent.innerHTML = `${content}`;
+        InfoBox.appendChild(logContent);
+        // |__CTA - READ MORE BUTTON
+        if (portal != null) {
             const ctaBox = document.createElement("div");
             ctaBox.id = "CTA_Box";
-            ctaBox.innerHTML = `<a href="${portal}" class="CalltoAction_Dark">Read More!</a>`;
+            ctaBox.innerHTML = `<cta-button type="dark" text="Read More" link="${portal}"/>`;
             InfoBox.appendChild(ctaBox);
         }
 
-        document.getElementById("LogsDiv").appendChild(log);
+        this.shadowRoot.appendChild(log);
+    }
+
+    addStyle(){
+        const style = document.createElement('style');
+        style.textContent = `
+            .${LOGCARD_TAG}{
+                display: flex;
+                border: 3px double black;
+                gap: 1em;
+                padding: .5em;
+                border-radius: 8px;
+            }
+            .${LOGCARD_TAG} > img{
+                height: 100px; width: 100px;
+                border-radius: 8px;
+            }
+        `;
+        this.shadowRoot.appendChild(style);
     }
 }
 
-// Initialize the navigation bar
-document.addEventListener("DOMContentLoaded", () => {
-    // Pass `true` for index.html level or `false` for pages folder
-    isIndexLevel = window.location.pathname.endsWith("index.html");
-
-    new TraitCards(2);
-    new DevLog();
-});
+customElements.define('dev-log', DevLog);

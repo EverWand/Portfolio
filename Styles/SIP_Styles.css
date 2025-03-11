@@ -1,3 +1,5 @@
+@import url('BaseStyleSheet.css');
+
 #ContentSect > div{
     padding: 2em 0px;
 }
@@ -5,50 +7,25 @@
 #OverviewDiv{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 2em;
-    max-width: 80%;
+    justify-self: center;
+    flex-wrap: wrap;
 }
 
-#SipDesc{
-    max-width: 60%;
-}
-
-#OverviewDiv > img{
-    height: 300px; 
-    max-width: 250px;
-    border-radius: 8px;
-}
-
-#TraitsDiv{
-    display: grid;
-    gap: 2em;
-}
-.trait{
-    
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    width: fit-content;
-}
-.trait > img{
-    height: 36px; width: 36px;
-    border-radius: 50%;
+#OverviewDiv > iframe{
+    min-width: 500px;
+    height: 45vw;
+    max-height: 400px;
+    border: 3px double var(--P1_MainShade); /* Example of using a variable */
+    border-radius: 5px;
 }
 
 #LogsDiv{
     display: flex;
+    min-width: 336px;
     flex-direction: column;
     gap: 5px;
-}
-.devCard{
-    display: flex;
-    border: 1px solid black;
-    gap: 1em;
-    padding: .5em;
-    max-width: 50vw;
-}
-.devCard > img{
-    height: 100px; width: 100px;
-    border-radius: 8px;
+    overflow-y: scroll;
+    background-color: var(--P1_LightShade); /* Example of using a variable */
 }
