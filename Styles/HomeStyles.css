@@ -1,5 +1,4 @@
-@import url('BaseStyleSheet.css');
-
+@import "BaseStyleSheet.css";
 
 #ContentSect{
     padding-top: 1em;

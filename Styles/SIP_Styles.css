@@ -1,4 +1,4 @@
-@import url('BaseStyleSheet.css');
+@import "BaseStyleSheet.css";
 
 #ContentSect > div{
     padding: 2em 0px;
