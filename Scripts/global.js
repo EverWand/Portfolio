@@ -118,6 +118,7 @@ class CTAButton extends HTMLElement {
         const style = document.createElement('style');
         style.textContent = `
             .cta-button {
+                display: inline-block;
                 font-size: 1rem;
                 background-color: rgba(0, 0, 0, 0.0);
                 color: ${textColor};
@@ -126,8 +127,6 @@ class CTAButton extends HTMLElement {
                 padding: .6em 1em;
                 border: .2em, double, ${borderColor};
                 border-radius: .2em .8em .2em .8em;
-                flex: 1;
-                max-width: 500px;
                 text-align: center;
             }
             .cta-button:hover {

@@ -51,7 +51,7 @@ class DevLog extends HTMLElement {
             <div class="${LOGCARD_TAG}">
                 <img src="${thumbnail}" alt="Thumbnail">
                 <div class="logInfo">
-                    <h1>${label}</h1>
+                    <h2>${label}</h2>
                     <div class="logContent">${content}</div>
                     ${portal ? `<div id="CTA_Box"><cta-button type="dark" text="Read More" link="${portal}"/></div>` : ''}
                 </div>
