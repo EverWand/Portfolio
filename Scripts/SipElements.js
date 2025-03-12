@@ -41,7 +41,7 @@ class DevLog extends HTMLElement {
     
     connectedCallback() {
         const label = this.getAttribute('label') || 'Label';
-        const thumbnail = this.getAttribute('thumbnail') || '../Images/Branding/EverLogo-Revision.png';
+        const thumbnail = this.getAttribute('thumbnail') || '../Images/Branding/EverLogo-Revision.png';             
         const portal = this.getAttribute('portal') || null;
         const content = this.innerHTML; // Move innerHTML content to a variable
         this.innerHTML = ''; // Clear the innerHTML
