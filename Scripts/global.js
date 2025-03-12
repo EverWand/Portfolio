@@ -96,13 +96,10 @@ class CTAButton extends HTMLElement {
         const type = this.getAttribute('type') || 'dark';
         const text = this.getAttribute('text') || 'Click Here';
         const link = this.getAttribute('link') || '#';
-
-        const button = document.createElement('a');
-        button.href = link;
-        button.textContent = text;
-        button.className = 'cta-button';
-
-        this.shadowRoot.appendChild(button);
+        
+        this.shadowRoot.innerHTML = `
+            <a href="${link}" class="cta-button">${text}</a>
+        `;
 
         this.addStyles(type);
     }
@@ -158,7 +155,7 @@ function displayFooter() {
         <div id="FooterText">
             <p>Page Created by Lucas Foxworthy</p>
             <hr>
-            <p>Last Updated: 3/11/2025</p>
+            <p>Last Updated: 3/12/2025</p>
         </div>
     </div>
     `;

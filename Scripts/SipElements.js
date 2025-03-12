@@ -43,30 +43,22 @@ class DevLog extends HTMLElement {
         const label = this.getAttribute('label') || 'Label';
         const thumbnail = this.getAttribute('thumbnail') || '../Images/Branding/EverLogo-Revision.png';
         const portal = this.getAttribute('portal') || null;
-
-        // Move innerHTML content to a variable
-        const content = this.innerHTML;
+        const content = this.innerHTML; // Move innerHTML content to a variable
         this.innerHTML = ''; // Clear the innerHTML
-
-        this.addLog(label, thumbnail, portal, content);
-        this.addStyle();
-    }
-
-    addLog(label, thumbnailPath, portal = null, content = "") {
-        //|__LOG CONTAINER
-        const log = document.createElement("div");
-        log.className = LOGCARD_TAG;
         
-        log.innerHTML = `
-            <img src="${thumbnailPath}" alt="Thumbnail">
-            <div class="logInfo">
-                <h1>${label}</h1>
-                <div class="logContent">${content}</div>
-                ${portal ? `<div id="CTA_Box"><cta-button type="dark" text="Read More" link="${portal}"/></div>` : ''}
+        /* DEVLOG HTML STRUCTURE */
+        this.shadowRoot.innerHTML = `
+            <div class="${LOGCARD_TAG}">
+                <img src="${thumbnail}" alt="Thumbnail">
+                <div class="logInfo">
+                    <h1>${label}</h1>
+                    <div class="logContent">${content}</div>
+                    ${portal ? `<div id="CTA_Box"><cta-button type="dark" text="Read More" link="${portal}"/></div>` : ''}
+                </div>
             </div>
-        `;
+        `; 
 
-        this.shadowRoot.appendChild(log);
+        this.addStyle(); // Add the style to the shadow root
     }
 
     addStyle(){
@@ -88,5 +80,4 @@ class DevLog extends HTMLElement {
         this.shadowRoot.appendChild(style);
     }
 }
-
 customElements.define('dev-log', DevLog);
