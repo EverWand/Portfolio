@@ -28,9 +28,4 @@
     gap: 5px;
     overflow-y: scroll;
     background-color: var(--P1_LightShade); /* Example of using a variable */
-    border: 3px double var(--P1_MainShade); /* Example of using a variable */
-}
-
-dev-log{
-    border-bottom: 1px solid var(--P1_MainShade); /* Example of using a variable */
 }

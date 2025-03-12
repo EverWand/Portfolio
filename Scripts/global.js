@@ -97,9 +97,7 @@ class CTAButton extends HTMLElement {
         const text = this.getAttribute('text') || 'Click Here';
         const link = this.getAttribute('link') || '#';
         
-        this.shadowRoot.innerHTML = `
-            <a href="${link}" class="cta-button">${text}</a>
-        `;
+        this.shadowRoot.innerHTML=`<a href="${link}" class="cta-button">${text}</a>`;
 
         this.addStyles(type);
     }

@@ -45,7 +45,7 @@ class DevLog extends HTMLElement {
         const portal = this.getAttribute('portal') || null;
         const content = this.innerHTML; // Move innerHTML content to a variable
         this.innerHTML = ''; // Clear the innerHTML
-        
+
         /* DEVLOG HTML STRUCTURE */
         this.shadowRoot.innerHTML = `
             <div class="${LOGCARD_TAG}">
