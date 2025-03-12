@@ -11,7 +11,7 @@ class TraitCards {
 
         for (let i = 1; i <= 4; i++) {
             const traitLabel = `Trait ${i}`;
-            this.InsertTrait(`$../Images/PlaceholderLC.png`, traitLabel);
+            this.InsertTrait(`/Portfolio/Images/PlaceholderLC.png`, traitLabel);
         }
     }
 
@@ -41,7 +41,7 @@ class DevLog extends HTMLElement {
     
     connectedCallback() {
         const label = this.getAttribute('label') || 'Label';
-        const thumbnail = this.getAttribute('thumbnail') || '../Images/Branding/EverLogo-Revision.png';
+        const thumbnail = this.getAttribute('thumbnail') || '/Portfolio/Images/Branding/EverLogo-Revision.png';
         const portal = this.getAttribute('portal') || null;
 
         // Move innerHTML content to a variable
