@@ -11,7 +11,7 @@ class TraitCards {
 
         for (let i = 1; i <= 4; i++) {
             const traitLabel = `Trait ${i}`;
-            this.InsertTrait(`/Portfolio/Images/PlaceholderLC.png`, traitLabel);
+            this.InsertTrait(`../Images/PlaceholderLC.png`, traitLabel);
         }
     }
 
@@ -41,7 +41,7 @@ class DevLog extends HTMLElement {
     
     connectedCallback() {
         const label = this.getAttribute('label') || 'Label';
-        const thumbnail = this.getAttribute('thumbnail') || '/Portfolio/Images/Branding/EverLogo-Revision.png';
+        const thumbnail = this.getAttribute('thumbnail') || '../Images/Branding/EverLogo-Revision.png';
         const portal = this.getAttribute('portal') || null;
 
         // Move innerHTML content to a variable
@@ -56,35 +56,15 @@ class DevLog extends HTMLElement {
         //|__LOG CONTAINER
         const log = document.createElement("div");
         log.className = LOGCARD_TAG;
-
-        //|__THUMBNAIL
-        const thumbnailImg = document.createElement("img");
-
-        thumbnailImg.src = thumbnailPath;
-        thumbnailImg.alt = "Thumbnail";
-        /* Add thumbnail to Log container*/
-        log.appendChild(thumbnailImg);
-
-        //|__INFORMATION
-        const InfoBox = document.createElement("div");
-        InfoBox.className = "logInfo";
-        /* Add Info to Log container */
-        log.appendChild(InfoBox);
         
-        // |__LABEL
-        InfoBox.innerHTML = `<h1>${label}</h1>`;
-        // |__LogContent
-        const logContent = document.createElement("div");
-        logContent.className = "logContent";
-        logContent.innerHTML = `${content}`;
-        InfoBox.appendChild(logContent);
-        // |__CTA - READ MORE BUTTON
-        if (portal != null) {
-            const ctaBox = document.createElement("div");
-            ctaBox.id = "CTA_Box";
-            ctaBox.innerHTML = `<cta-button type="dark" text="Read More" link="${portal}"/>`;
-            InfoBox.appendChild(ctaBox);
-        }
+        log.innerHTML = `
+            <img src="${thumbnailPath}" alt="Thumbnail">
+            <div class="logInfo">
+                <h1>${label}</h1>
+                <div class="logContent">${content}</div>
+                ${portal ? `<div id="CTA_Box"><cta-button type="dark" text="Read More" link="${portal}"/></div>` : ''}
+            </div>
+        `;
 
         this.shadowRoot.appendChild(log);
     }
@@ -104,6 +84,7 @@ class DevLog extends HTMLElement {
                 border-radius: 8px;
             }
         `;
+
         this.shadowRoot.appendChild(style);
     }
 }
