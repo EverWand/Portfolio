@@ -62,6 +62,11 @@ class DevLog extends HTMLElement {
 customElements.define('dev-log', DevLog);
 
 function updateLogPage(logPath){
-    const viewArea = document.getElementById(`${LOG_VIEW_TAG}`)
-    viewArea.src = logPath
+    console.log("Updating log page with path:", logPath); // Debugging line
+    const viewArea = document.getElementById(`${LOG_VIEW_TAG}`);
+    if (logPath) {
+        viewArea.src = logPath;
+    } else {
+        console.error("No logPath provided");
+    }
 }
