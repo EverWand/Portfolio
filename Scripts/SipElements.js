@@ -1,36 +1,6 @@
 const LOGCARD_TAG = "devCard";
+const LOG_VIEW_TAG = "DevPage"
 const TRAIT_TAG = "trait";
-
-// Make Trait Cards
-class TraitCards {
-    // Constructor
-    constructor(columnLimit) {
-        this.currCol = 1;
-        this.currRow = 1;
-        this.colLimit = columnLimit;
-
-        for (let i = 1; i <= 4; i++) {
-            const traitLabel = `Trait ${i}`;
-            this.InsertTrait(`../Images/PlaceholderLC.png`, traitLabel);
-        }
-    }
-
-    InsertTrait(iconPath, traitLabel) {
-        if (this.currCol > this.colLimit) {
-            this.currCol = 1;
-            this.currRow++;
-        }
-
-        const traitPos = `grid-column: ${this.currCol}; grid-row: ${this.currRow};`;
-        const content = document.createElement("div");
-        content.className = TRAIT_TAG;
-        content.style = traitPos;
-        content.innerHTML = `<img src=${iconPath} alt="Icon"><h1>${traitLabel}</h1>`;
-
-        document.getElementById("TraitsDiv").appendChild(content);
-        this.currCol++;
-    }
-}
 
 // Create Devlog Entry Tag
 class DevLog extends HTMLElement {
@@ -42,8 +12,9 @@ class DevLog extends HTMLElement {
     connectedCallback() {
         const label = this.getAttribute('label') || 'Label';
         const thumbnail = this.getAttribute('thumbnail') || '../Images/Branding/EverLogo-Revision.png';             
-        const portal = this.getAttribute('portal') || null;
+        const logPath = this.getAttribute('blog') || null;
         const content = this.innerHTML; // Move innerHTML content to a variable
+
         this.innerHTML = ''; // Clear the innerHTML
 
         /* DEVLOG HTML STRUCTURE */
@@ -53,10 +24,14 @@ class DevLog extends HTMLElement {
                 <div class="logInfo">
                     <h2>${label}</h2>
                     <div class="logContent">${content}</div>
-                    ${portal ? `<div id="CTA_Box"><cta-button type="dark" text="Read More" link="${portal}"/></div>` : ''}
                 </div>
             </div>
         `; 
+
+        //ADD EVENT LISTENER
+        this.shadowRoot.querySelector(`.${LOGCARD_TAG}`).addEventListener('click', () => {
+            updateLogPage(logPath);
+        });
 
         this.addStyle(); // Add the style to the shadow root
     }
@@ -75,9 +50,18 @@ class DevLog extends HTMLElement {
                 height: 100px; width: 100px;
                 border-radius: 8px;
             }
+
+            .${LOGCARD_TAG}:hover{
+                background-color:rgba(125, 140, 154, .5); /* Change background color on hover */
+            }
         `;
 
         this.shadowRoot.appendChild(style);
     }
 }
 customElements.define('dev-log', DevLog);
+
+function updateLogPage(logPath){
+    const viewArea = document.getElementById(`${LOG_VIEW_TAG}`)
+    viewArea.src = logPath
+}

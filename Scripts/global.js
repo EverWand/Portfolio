@@ -152,7 +152,7 @@ function displayFooter() {
         <div id="FooterText">
             <p>Page Created by Lucas Foxworthy</p>
             <hr>
-            <p>Last Updated: 3/12/2025</p>
+            <p>Last Updated: 3/17/2025</p>
         </div>
     </div>
     `;
