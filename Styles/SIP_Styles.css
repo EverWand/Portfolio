@@ -13,7 +13,7 @@
     flex-wrap: wrap;
 }
 
-#OverviewDiv > iframe{
+#OverviewThumbnail{
     min-width: 500px;
     height: 45vw;
     max-height: 400px;

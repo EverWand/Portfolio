@@ -1,9 +1,12 @@
 const PLACE_HOLDER_IMG = "../Images/PlaceholderLC.png";
 const ROOT_PATH = getRootPath();
 
-class NavBar {
+/*=====| NAVIGATION BAR ELEMENT |=====*/
+class NavBar extends HTMLElement {
     constructor() {
-        // Example navigation items
+        super();
+    }
+    connectedCallback(){
         const navItems = [
             { text: "Home", href: "index.html" },
             { text: "Portfolio", href: "Pages/portfolio.html" },
@@ -16,27 +19,16 @@ class NavBar {
         // Create the navigation bar
         const nav = document.createElement("nav");
         this.ul = document.createElement("ul");
-
+        
         navItems.forEach(item => {
             this.addNav(item.text, item.href);
         });
-
-        nav.appendChild(this.ul);
-
-        document.body.insertBefore(nav, document.body.firstChild);
-
-        this.addStyles(); //STYLES THE NAVIGATION BAR
-    }
-
-    createLogo() {
-        const logo = document.createElement("img");
-
-        logo.id = "Nav-Logo";
-        logo.src = "./Images/Branding/EverLogo-Revision.png";
-        logo.alt = "Site Logo";
-        logo.onclick = () => (window.location.href = "./index.html");
         
-        this.navContainer.appendChild(logo);
+        nav.appendChild(this.ul);
+    
+        document.body.insertBefore(nav, document.body.firstChild);
+        
+        this.addStyles(); //Style Navigation Bar
     }
 
     addNav(name, href) {
@@ -85,7 +77,9 @@ class NavBar {
         document.head.appendChild(style);
     }
 }
+customElements.define('nav-bar', NavBar);
 
+/*=====| CALL-TO-ACTION BUTTON ELEMENT |=====*/
 class CTAButton extends HTMLElement {
     constructor() {
         super();
@@ -140,48 +134,63 @@ class CTAButton extends HTMLElement {
 }
 customElements.define('cta-button', CTAButton);
 
+/*=====| FOOTER SECTION ELEMENT |=====*/
+class Footer extends HTMLElement{
+    constructor() {
+        super();
+    }
 
-/* Footer Display */
-function displayFooter() {
-    const footer = document.createElement("footer");
-    footer.innerHTML = `
-    <div id="FooterContent">
-        <div id="FooterLogo">
-            <img src="${ROOT_PATH}/Images/Branding/EverLogo-Revision.png" alt="Site Logo">
-        </div>
-        <div id="FooterText">
-            <p>Page Created by Lucas Foxworthy</p>
-            <hr>
-            <p>Last Updated: 3/17/2025</p>
-        </div>
-    </div>
-    `;
-
-    document.body.appendChild(footer);
-
-    const style = document.createElement("style");
-
-    style.textContent = `
-        footer{
-            background-color: var(--P1_DarkAccent);
-            color: var(--P1_LightShade);
-            text-align: center;
-            padding: .7em;
-            margin-top: auto;
-        }
-        #FooterContent{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1em;
-        }
-        #FooterLogo img{
-            width: 100px;
-        }
-    `;
+    connectedCallback() {
+        this.displayFooter();
+        this.addStyle();
+    }
     
-    document.head.appendChild(style);
+    /* Footer Display */
+    displayFooter() {
+        const footer = document.createElement("footer");
+        footer.innerHTML = `
+        <div id="FooterContent">
+            <div id="FooterLogo">
+                <img src="${ROOT_PATH}/Images/Branding/EverLogo-Revision.png" alt="Site Logo">
+            </div>
+            <div id="FooterText">
+                <p>Page Created by Lucas Foxworthy</p>
+                <hr>
+                <p>Last Updated: 3/17/2025</p>
+            </div>
+        </div>
+        `;
+
+        document.body.appendChild(footer);
+    }
+
+    addStyle(){
+        const style = document.createElement("style");
+
+        style.textContent = `
+            footer{
+                background-color: var(--P1_DarkAccent);
+                color: var(--P1_LightShade);
+                text-align: center;
+                padding: .7em;
+                margin-top: auto;
+            }
+            #FooterContent{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1em;
+            }
+            #FooterLogo img{
+                width: 100px;
+            }
+        `;
+        
+        document.head.appendChild(style);
+    }
 }
+customElements.define('footer-sect', Footer)
+
 
 /* Returns the path to the 'Portfolio' root folder*/
 function getRootPath() {
@@ -197,9 +206,3 @@ function getRootPath() {
     //if the 'Portfolio' folder is not found, return the parent path
     return './';
 }
-
-/*=====| ON PAGE LOAD |=====*/
-document.addEventListener("DOMContentLoaded", () => {
-    new NavBar();
-    displayFooter();
-});
