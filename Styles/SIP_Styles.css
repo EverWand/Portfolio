@@ -1,6 +1,31 @@
 @import "BaseStyleSheet.css";
 
+
+body{
+    background-color: var(--P1_DarkAccent); 
+}
+#HeroSect{
+background-color: rgba(0,0,0,.5);
+}
+
+
+#HeroSect > #SQ-Logo{
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+#ContentSect{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--P1_DarkAccent);
+    gap: 2.5em;
+}
 #ContentSect > div{
+    border-radius: 36px;
+    background-color: var(--P1_LightShade); 
     padding: 2em 0px;
 }
 
@@ -11,6 +36,17 @@
     gap: 2em;
     justify-self: center;
     flex-wrap: wrap;
+}
+/* Default layout for wide screens */
+#OverviewContent {
+    display: grid;
+    grid-template-columns: 1fr; /* Paragraph and sprite stack by default */
+    gap: 1em;
+}
+
+#OverviewContent img.characterPortrait {
+    justify-self: center; /* Center the sprite below the paragraph */
+    transform: scaleX(-1);
 }
 
 #OverviewThumbnail{
@@ -28,4 +64,33 @@
     gap: 5px;
     overflow-y: scroll;
     background-color: var(--P1_LightShade); /* Example of using a variable */
+}
+
+#DevLogSect{
+    padding: 2em; 
+    display: inline-flex; 
+    gap: 2em; 
+    width: 100%;
+}
+
+
+/* Adjust layout for narrow screens */
+@media (max-width: 768px) {
+    #OverviewDiv {
+        display: flex;
+        flex-direction: column; /* Stack the description and thumbnail vertically */
+    }
+
+    #OverviewContent {
+        display: flex;
+        flex-direction: row; /* Place paragraph and sprite side by side */
+        align-items: center;
+        gap: 1em;
+    }
+
+    #OverviewContent img.characterPortrait {
+        width: 150px; /* Adjust sprite size for smaller screens */
+        height: auto;
+        transform: scaleX(1);
+    }
 }

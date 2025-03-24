@@ -17,36 +17,45 @@
     <nav-bar></nav-bar>
     <!--Hero Section-->
     <section id="HeroSect">
-        <image src="../Images/SideQuest Logo/SQLogo-Full.png" alt="SideQuest Logo"></image>
+        <image id="SQ-Logo" style="border: 8px double var(--P1_LightShade); border-radius: 24px;" src="../Images/SideQuest Logo/BG/SQLogo-Full.png" alt="SideQuest Logo"></image>
     </section>
-    <section id="ContentSect">
+    <section id="ContentSect" >
         <div id = "OverviewDiv">
             <div id = "SipDesc" style="flex: 1; min-width: 275px; padding: 2em">
                 <h2>Welcome to SideQuest</h2>
                 <br>
-                <p>SideQuest is a tool made for users to gain a better habit of tracking their tasks and being more precise with how long they believe they will be able to complete tasks to help plan their workflow. The user will create their tasks and set up a target timeframe for how long it takes to complete it. Precision is rewarded using familiar RPG mechanics such as attacking an enemy, with damage being based on the difficulty/the length of the task, how close the completion time was to the target time, and if the task was urgent.</p>
+                <div id="OverviewContent">
+                    <p style="grid-row: 1; grid-column: 0;">SideQuest is a tool made for users to gain a better habit of tracking their tasks and being more precise with how long they believe they will be able to complete tasks to help plan their workflow. The user will create their tasks and set up a target timeframe for how long it takes to complete it. Precision is rewarded using familiar RPG mechanics such as attacking an enemy, with damage being based on the difficulty/the length of the task, how close the completion time was to the target time, and if the task was urgent.</p>
+
+                <image style="grid-row: 0; grid-column: 0; " class="characterPortrait" src="../Images/SIP/Characters/ShopKeepSprite.png" alt="PlagueDoctor Sprite"></image>
+                </div>
+                
             </div>
             <div id="OverviewThumbnail" style="flex: 1.2;">
                 <iframe style="width: 100%; height: 100%;" src="https://docs.google.com/document/d/e/2PACX-1vQJ-CbWrl4Zak1kdmdWnBzIQlo11EZzsJB1BE88SxxI_QSgEpAA8LhwBFaU91iyivIhuvIIA7HGfvOU/pub?embedded=true" ></iframe>
             </div>
             
+            
         </div>
         <hr>
-        <div id="ClaimSect"  style="padding: 2em">
-            <h2>Innovation Claim</h2>
-            <br>
-            <p style="max-width: 35vw; min-width: 275px">SideQuest is a gamified task tracker that encourages precision and accountablity in estimating time it takes for tasks. The user will experience higher reward through a calculation that takes into account the difficulty, accuracy of completion time, and urgency of each task.</p>
-        </div>
-        <hr>
-        <div id="PrototypeSect" style="display:flex; flex-direction:column; gap: 1em;  padding: 2em">
-            <div style="display: flex; gap: 12px; align-items: center;">
-                <h2>Prototype</h2>
-                <div id="CTA_Box" style="justify-content: left;">
-                    <cta-button type="dark" text="Github" link="https://github.com/EverWand/SideQuest-Prototype" ></cta-button>
-                </div>
+        <div>
+            <div id="ClaimSect"  style="padding: 2em">
+                <h2>Innovation Claim</h2>
+                <br>
+                <p style="max-width: 35vw; min-width: 275px">SideQuest is a gamified task tracker that encourages precision and accountablity in estimating time it takes for tasks. The user will experience higher reward through a calculation that takes into account the difficulty, accuracy of completion time, and urgency of each task.</p>
             </div>
-            <p style="max-width:35vw; min-width: 275px;">While SideQuest was originally intended to be a browser extension, I have opted to create a prototype within Unity. This choice was mainly due to how I am more familiar with production in that environment. <br><i style="color: slategrey;">(Also to have it count towards submissions for a class)</i>. </p>
+            <hr style="margin: 0px 2em;">
+            <div id="PrototypeSect" style="display:flex; flex-direction:column; gap: 1em;  padding: 2em">
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <h2>Prototype</h2>
+                    <div id="CTA_Box" style="justify-content: left;">
+                        <cta-button type="dark" text="Github" link="https://github.com/EverWand/SideQuest-Prototype" ></cta-button>
+                    </div>
+                </div>
+                <p style="max-width:35vw; min-width: 275px;">While SideQuest was originally intended to be a browser extension, I have opted to create a prototype within Unity. This choice was mainly due to how I am more familiar with production in that environment. <br><i style="color: slategrey;">(Also to have it count towards submissions for a class)</i>. </p>
+            </div>
         </div>
+        
         <hr>
         <div id="DevLogSect" style="padding: 2em; display: inline-flex; gap: 2em; width: 100%;">
                 <div>   
